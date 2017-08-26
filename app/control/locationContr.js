@@ -1,9 +1,7 @@
 /**
  * Created by hasee on 2017/8/10.
  */
-import AddLocation from '../service/location/addLocation';
-import ModifyLocation from '../service/location/modifyLocation';
-import RemoveLocation from '../service/location/removeLocation';
+import {AddLocation,ModifyLocation,RemoveLocation} from '../service/location';
 const locationContr = {
     async addLocation(req, res){
         let context = {

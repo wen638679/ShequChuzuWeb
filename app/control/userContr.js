@@ -1,10 +1,7 @@
 /**
  * Created by hasee on 2017/8/6.
  */
-import Register from '../service/user/register';
-import Login from '../service/user/login';
-import Modify from '../service/user/modify';
-import Authentication from '../service/user/authentication';
+import {Register,Login,Modify,Authentication} from '../service/user'
 const userContr = {
     async register(req, res){
         let context = {

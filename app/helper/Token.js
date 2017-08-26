@@ -19,6 +19,8 @@ export function autoToken(req, res, next){
                res.json({core:1,error:'token过期'});
            }else{
                req.userInfo = data;
+               delete req.body.token;
+               delete req.query.token;
                next();
            }
        })

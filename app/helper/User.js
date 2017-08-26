@@ -44,7 +44,7 @@ const loginOptions = {
 
 module.exports.findByUserLogin = async(username,update)=>{
     if(username){
-        return await User.findOneAndUpdate({username},update,loginOptions);
+        return await User.findOneAndUpdate({username},update,loginOptions).lean();
     }else{
         return null;
     }
@@ -53,7 +53,7 @@ module.exports.findByUserLogin = async(username,update)=>{
 module.exports.updateById = async(id,update)=>{
     if(id){
         let _id = mongoose.Types.ObjectId(id);
-        return await User.update({_id:_id},update,updateOptions);
+        return await User.update({_id:_id},update,updateOptions).lean();
     }else{
         return null;
     }

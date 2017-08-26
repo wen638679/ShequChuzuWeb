@@ -15,7 +15,8 @@ const leaseSchema = new Schema({
     rent:{type:Number,require:true}, //租金
     rentCycle:{type:Number,require:true,default:1}, //周期/天
     conditions:[String], //要求
-    status:{type:String,enum:[0,1,2,3,4,5,6],require:true}, //状态
+    status:{type:String,enum:[-1,0,1,2,3,4,5,6],require:true}, //状态
+    wantUser:[Schema.Types.ObjectId], //想租的用户ID
     likesUser:[Schema.Types.ObjectId], //感兴趣的用户ID
     leaseUser:Schema.Types.ObjectId, //租客用户ID
     createDate:Date, //创建时间

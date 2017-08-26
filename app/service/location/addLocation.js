@@ -18,7 +18,12 @@ function validateParams(){
         address:Joi.string().min(1)
     });
     console.log(schema)
-    let params = {x:this.context.request.body.x,y:this.context.request.body.y,userId:this.context.request.body.userId,address:this.context.request.body.address};
+    let params = {
+        x:this.context.request.body.x,
+        y:this.context.request.body.y,
+        userId:this.context.request.body.userId,
+        address:this.context.request.body.address
+    };
     console.log(params)
     let result = Joi.validate(params,schema);
     console.log(result)
